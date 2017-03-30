@@ -1,0 +1,19 @@
+{% assign photo_album = include.photo.path | remove: include.collection.relative_directory | remove_first: '/' | split: '/' | first %}
+{% assign photo_name = include.photo.title | replace: ' ', '_' | downcase %}
+{% assign photo_files = site.static_files | where_exp: 'file', 'file.basename contains photo_name' %}
+{% include var/new_array.liquid %}
+{% for _file in photo_files %}
+    {% assign _width = _file.basename | remove: photo_name | remove: '_' | split: 'x' | first | to_integer %}
+    {% assign _array = _array | push: _width %}
+{% endfor %}
+{% assign _widths = _array | sort %}
+{% include var/new_array.liquid %}
+{% for _width in _widths %}
+    {% assign _prefix = photo_name | append: '_' | append: _width %}
+    {% assign _file = photo_files | where_exp: 'file', 'file.basename contains _prefix' | first %}
+    {% capture _src %}{{ _file.path }} {{ _width }}w{% endcapture %}
+    {% assign _array = _array | push: _src %}
+{% endfor %}
+{% assign photo_thumbnail = _array | first | split: ' ' | first %}
+{% assign photo_original = _array | last | split: ' ' | first %}
+{% assign photo_srcset = _array | join: ', ' %}

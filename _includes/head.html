@@ -1,0 +1,9 @@
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+
+    <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | prepend: site.url }}"/>
+    <link rel="stylesheet" href="/css/main.css"/>
+    <script src="/js/vendor/modernizr.min.js"></script>
+</head>

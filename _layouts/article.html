@@ -1,0 +1,12 @@
+---
+layout: page
+---
+{% include var/theme.liquid %}
+{% include var/article_image.liquid image=page.teaser_image %}
+<article>
+<div class="article-hero" style="background-image:url({{ article_image }});"></div>
+{% include article_header.html author=true %}
+<section class="content">
+{{ content }}
+</section>
+</article>

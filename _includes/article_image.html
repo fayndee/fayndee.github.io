@@ -1,0 +1,5 @@
+{% include var/article_image.liquid article=include.article image=include.image %}
+<figure class="image">
+<img src="{{ article_image }}" alt="{{ include.caption }}">
+{% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+</figure>

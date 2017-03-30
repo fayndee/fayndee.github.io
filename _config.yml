@@ -1,0 +1,30 @@
+# Info
+title: fayndee.me
+description: A little space where I share about my work and passion.
+url: http://fayndee.me
+author: Fang Yuan
+
+# Data
+collections:
+  photos:
+    albums:
+      - landscape
+      - cityscape
+      - fine-art
+      - people
+    preview: 3
+defaults:
+  - scope:
+      path: techie
+      type: posts
+    values:
+      layout: article
+      teaser_image: article_teaser.jpg
+
+# Settings
+sass:
+  style: compressed
+permalink: /:categories/:title/
+exclude: [README.md, LICENSE.md, .gitignore, Gemfile, Gemfile.lock]
+
+# Plugins

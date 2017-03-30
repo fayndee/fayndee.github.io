@@ -1,0 +1,21 @@
+techie:
+    -   name: blog
+        description: My technical blog
+        url: /techie
+        target: _self
+
+    -   name: about
+        description: About me as a Techie
+        url: /techie/about
+        target: _self
+
+shutterbug:
+    -   name: gallery
+        description: My photo gallery
+        url: /shutterbug
+        target: _self
+
+    -   name: about
+        description: About me as a Shutterbug
+        url: /shutterbug/about
+        target: _self

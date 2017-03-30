@@ -1,0 +1,36 @@
+techie:
+    -   name: <i class="icon-twitter"></i>
+        description: Follow me on Twitter
+        url: http://twitter.com/fayndee
+        target: _blank
+
+    -   name: <i class="icon-github"></i>
+        description: Fork me on Github
+        url: http://github.com/fayndee
+        target: _blank
+
+    -   name: <i class="icon-up"></i>
+        description: Go to top
+        url: "#page"
+        target: _self
+
+shutterbug:
+    -   name: <i class="icon-flickr"></i>
+        description: Follow me on Flickr
+        url: http://flicker.com/fayndee
+        target: _blank
+
+    -   name: <i class="icon-500px"></i>
+        description: Follow me on 500px
+        url: http://500px.com/fayndee
+        target: _blank
+
+    -   name: <i class="icon-tuchong"></i>
+        description: 关注我的图虫帐号
+        url: http://fayndee.tuchong.com
+        target: _blank
+
+    -   name: <i class="icon-up"></i>
+        description: Go to top
+        url: "#page"
+        target: _self

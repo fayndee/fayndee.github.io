@@ -1,0 +1,5 @@
+{% for collection in site.collections %}
+    {% if collection.label == 'photos' %}
+        {% assign photo_collection = collection %}
+    {% endif %}
+{% endfor %}

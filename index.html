@@ -1,0 +1,31 @@
+---
+layout: body
+title: Fang Yuan
+portal:
+    left:
+        text: "<h1>techie</h1>
+            <p>Single-minded developer with a wide open mindset.</p>"
+        image: "/images/fang-techie.jpg"
+        link: /techie
+    right:
+        text: "<h1>shutterbug</h1>
+            <p>Photography enthusiast who believes in all good things.</p>"
+        image: "/images/fang-shutterbug.jpg"
+        link: /shutterbug
+---
+<div class="portal-full">
+<a href="{{ page.portal.left.link }}">
+<div class="portal-half left" style="background-image:url({{ page.portal.left.image }});">
+<section id="left">
+{{ page.portal.left.text }}
+</section>
+</div>
+</a>
+<a href="{{ page.portal.right.link }}">
+<div class="portal-half right" style="background-image:url({{ page.portal.right.image }});">
+<section id="right">
+{{ page.portal.right.text }}
+</section>
+</div>
+</a>
+</div>

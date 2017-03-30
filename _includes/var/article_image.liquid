@@ -1,0 +1,3 @@
+{% include var/theme.liquid page=include.article %}
+{% include var/date_string.liquid page=include.article %}
+{% capture article_image %}/images/blog/{{ theme }}/{{ date_string }}/{{ include.image }}{% endcapture %}

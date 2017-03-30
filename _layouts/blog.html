@@ -1,0 +1,14 @@
+---
+layout: page
+---
+{% include var/theme.liquid %}
+{% assign latest = site.categories[theme].first %}
+{% include var/article_image.liquid article=latest image=latest.teaser_image %}
+<div class="article-hero" style="background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7)),url({{ article_image }});">
+{% include article_header.html article=latest excerpt=true %}
+</div>
+<div class="article-list">
+{% for article in site.categories[theme] offset: 1 %}
+{% include article_header.html article=article teaser=true excerpt=true %}
+{% endfor %}
+</div>

@@ -1,0 +1,30 @@
+html.techie {
+    body {
+        color: $black;
+        background-color: $white;
+    }
+
+    article .article-header {
+        background-color: $grey;
+    }
+
+    .article-list {
+        .caption,
+        .excerpt {
+            color: lighten($black, 70%);
+        }
+    }
+
+    footer {
+        background-color: $grey;
+    }
+}
+
+html.shutterbug {
+    body,
+    footer,
+    header {
+        color: $white;
+        background-color: $black;
+    }
+}

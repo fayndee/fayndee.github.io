@@ -1,0 +1,5 @@
+@mixin child-space($margin: $row-space) {
+    & > *:not(:last-child) {
+        margin-bottom: $margin;
+    }
+}

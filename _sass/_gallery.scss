@@ -1,0 +1,111 @@
+$gallery-row-height: 10rem;
+$gallery-gutter: .6rem;
+
+.gallery {
+    padding-top: $gallery-gutter;
+    @include child-space($row-space);
+
+    &:hover > a:not(:hover) {
+        opacity: .7;
+    }
+
+    a {
+        display: block;
+        transition: opacity .3s;
+    }
+
+    .gallery-album {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        width: 100%;
+        height: $gallery-row-height;
+        @media only screen and (max-width: $screen-small - 1) {
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .title {
+            flex: none;
+            position: absolute;
+            right: 0;
+            bottom: $gallery-gutter;
+            width: 40%;
+            padding: $gallery-gutter;
+            background-color: transparentize($black, .3);
+            @media only screen and (max-width: $screen-small - 1) {
+                top: $gallery-gutter;
+                bottom: auto;
+            }
+        }
+
+        .gallery-album-fb,
+        .gallery-album-img {
+            flex-grow: 1;
+            object-fit: cover;
+            background-size: cover;
+            background-position: center center;
+            overflow: hidden;
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    .object-fit & .gallery-album-fb {
+        display: none;
+    }
+
+    .no-object-fit & .gallery-album-img {
+        display: none;
+    }
+}
+
+.album {
+    padding-top: $gallery-gutter;
+    @include child-space($row-space);
+
+    figure {
+        &:after {
+            display: block;
+            clear: both;
+            content: "";
+        }
+
+        img {
+            float: left;
+            object-fit: contain;
+            overflow: hidden;
+            width: 65%;
+            margin-right: 1%;
+            @media only screen and (max-width:$screen-small - 1) {
+                float: none;
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: $row-space;
+            }
+        }
+
+        figcaption {
+            float: left;
+            width: 32%;
+            height: 100%;
+            padding-left: 1%;
+            border-left: 1px solid;
+            @extend h6;
+            @include child-space($gallery-gutter);
+            @media only screen and (max-width:$screen-small - 1) {
+                float: none;
+                width: 100%;
+                padding-left: 0;
+                border-left: none;
+            }
+        }
+    }
+}
+
+.pswp {
+    .pswp__caption__center {
+        @extend cite;
+        text-align: center;
+    }
+}

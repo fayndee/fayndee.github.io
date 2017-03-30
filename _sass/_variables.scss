@@ -1,0 +1,23 @@
+// Typography
+$font-headline        : 'Roboto Slab', serif;
+$font-paragraph       : 'Open Sans', sans-serif;
+$font-size            : 16px;
+
+// Color
+$black                : #000;
+$white                : #fff;
+$grey                 : darken($white, 5%);
+$blue                 : #248fec;
+
+// Screen
+$screen-xlarge        : 2560px;
+$screen-large         : 1920px;
+$screen-medium        : 1280px;
+$screen-small         : 640px;
+$screen-large-xlarge  : ($screen-large + $screen-xlarge) / 2;
+$screen-medium-large  : ($screen-medium + $screen-large) / 2;
+$screen-small-medium  : ($screen-small + $screen-medium) / 2;
+
+// Layout
+$column-space         : 2rem;
+$row-space            : 1.6rem;

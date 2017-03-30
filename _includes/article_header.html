@@ -1,0 +1,32 @@
+{% assign _article = include.article | default: page %}
+<section class="article-header content">
+{% if include.excerpt %}
+<a class="mono" href="{{ _article.url }}" title="{{ _article.title }}">
+{% endif %}
+<h6 class="caption">
+<span>{{ _article.tags | join: ', ' | downcase }}</span>
+<time>{{ _article.date | date: '%b %e, %Y' | downcase }}</time>
+</h6>
+{% if include.teaser %}
+<div class="grid">
+{% include var/article_image.liquid article=_article image=_article.teaser_image %}
+<figure style="background-image:url({{ article_image }});"></figure>
+<aside>
+{% endif %}
+<h1 class="title">{{ _article.title }}</h1>
+{% if include.author %}
+<h6><span class="caption">written by</span></h6>
+<h5 class="author">{{ page.author | default: site.author }}</h5>
+{% endif %}
+{% if include.excerpt %}
+<p>
+<span class="excerpt">{{ _article.excerpt | strip_html | strip }} ...</span>
+{{ site.data.label.read_more }}
+</p>
+{% if include.teaser %}
+</aside>
+</div>
+{% endif %}
+</a>
+{% endif %}
+</section>

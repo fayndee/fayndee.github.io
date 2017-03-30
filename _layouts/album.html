@@ -1,0 +1,23 @@
+---
+layout: page
+---
+{% include var/photo_collection.liquid %}
+{% assign photos = site.photos | sort: 'date' | reverse %}
+<div class="album content" itemscope itemtype="http://schema.org/ImageGallery">
+{% for photo in photos %}
+{% include var/photo_attrs.liquid collection=photo_collection photo=photo %}
+{% if photo_album == page.album %}
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a class="mono" href="{{ photo_original }}" itemprop="contentUrl">
+            <img src="{{ photo_thumbnail }}" srcset="{{ photo_srcset }}" title="{{ photo.title }}" itemprop="thumbnail" />
+        </a>
+        <figcaption itemprop="caption description">
+            <cite>{{ photo.title }}</cite>
+            {{ photo.content }}
+        </figcaption>
+    </figure>
+{% endif %}
+{% endfor %}
+</div>
+{% include photoswipe.html %}
+<script>initPhotoSwipeFromDOM('.album');</script>

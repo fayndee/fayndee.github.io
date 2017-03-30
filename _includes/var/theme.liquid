@@ -1,0 +1,6 @@
+{% assign _page = include.page | default: page %}
+{% if _page.url == '/' %}
+    {% assign theme = 'home' %}
+{% else %}
+    {% assign theme = _page.url | remove_first: '/' | split: '/' | first %}
+{% endif %}
