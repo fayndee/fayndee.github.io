@@ -30,6 +30,7 @@ html {
         }
     }
 
+    &,
     &.techie {
         body {
             color: $black;
@@ -46,16 +47,10 @@ html {
                 color: lighten($black, 70%);
             }
         }
-
-        footer {
-            background-color: $grey;
-        }
     }
 
     &.shutterbug {
-        body,
-        footer,
-        header {
+        body {
             color: $white;
             background-color: $black;
         }
