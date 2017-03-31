@@ -18,7 +18,7 @@ defaults:
       path: techie
       type: posts
     values:
-      layout: article
+      layout: page_framed_article
       teaser_image: article_teaser.jpg
 
 # Settings

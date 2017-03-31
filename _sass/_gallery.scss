@@ -14,7 +14,7 @@ $gallery-gutter: .6rem;
         transition: opacity .3s;
     }
 
-    .gallery-album {
+    &-album {
         display: flex;
         position: relative;
         flex-direction: row;

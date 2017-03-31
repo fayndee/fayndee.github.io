@@ -1,7 +1,11 @@
----
-layout: body
----
 {% include var/theme.liquid %}
-{% include header.html theme=theme %}
+<!DOCTYPE html>
+<html lang="en" class="{{ theme }}">
+{% include head.html %}
+<body id="page">
+<!--[if IE]>
+<div class="ie-alert">Oops, your Internet Explorer version is not supported, please update it first.</div>
+<![endif]-->
 {{ content }}
-{% include footer.html theme=theme %}
+</body>
+</html>
