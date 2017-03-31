@@ -33,7 +33,7 @@ The good thing of the spec-code-spec iteration approach is we can get an always-
 To address this, we wrote a small test against `/api-docs`, save the response into a JSON file, package and deploy it as a separate artifact using [maven-assembly-plugin](http://maven.apache.org/plugins/maven-assembly-plugin/single-mojo.html):
 
 > Note: [spring-boot 1.4.x](http://docs.spring.io/spring-boot/docs/1.4.x/reference/htmlsingle/) is used in this example.
-{:.quote-info}
+{:.quote--info}
 
 ```java
 @RunWith(SpringRunner.class)
@@ -71,7 +71,7 @@ public class ApiDocumentationTest {
 At this point, we are able to get an offline spec of our API after each build and keep it tracked by artifact version. Now we are free to share it with the counter-parties, at any time we want and with any version we want, even before we roll out the API for instance.
 
 > Tip: With Artifactory, we can also directly link to the [latest version](https://www.jfrog.com/confluence/display/RTF/Artifactory+REST+API#ArtifactoryRESTAPI-RetrieveLatestArtifact) of your artifact, so the link never get out-dated.
-{:.quote-info}
+{:.quote--info}
 
 ## Refinement with AsciiDoc
 
@@ -82,7 +82,7 @@ For that we have added an AsciiDoc to our API , combining the specification with
 To put it with our sauce, we first enhanced our test mentioned before with additional steps:
 
 > Note: For this to work you may need to add [spring-restdocs](http://projects.spring.io/spring-restdocs/), [swagger2markup](http://swagger2markup.github.io/swagger2markup/1.0.1-SNAPSHOT/#_getting_started) and [swagger2markup-spring-restdocs-ext](http://swagger2markup.github.io/swagger2markup/1.0.1-SNAPSHOT/#extension_spring_restdocs) as test dependencies to your project.
-{:.quote-info}
+{:.quote--info}
 
 ```java
 @Rule
@@ -149,7 +149,7 @@ The final result is something like this:
 The only thing left is, again, package `target/api-docs` and deploy it as a separate artifact using [maven-assembly-plugin](http://maven.apache.org/plugins/maven-assembly-plugin/single-mojo.html). Then we are free to share the nice reference doc with the world.
 
 > Tip: With Artifactory, we can actually serve HTML from an archive if [jar/zip content browsing](https://www.jfrog.com/confluence/display/RTF/Artifactory+2.2.2) is enabled.
-{:.quote-info}
+{:.quote--info}
 
 ## Add more context with cucumber reports
 
@@ -181,7 +181,7 @@ From the workshop we've got from [Simon Brown](http://simonbrown.je/), we get to
 Setup it up is really simple. Everyone could do it in a matter of minutes by following the [tutorials](https://structurizr.com/help/tutorials). To put it in our case, we created another test to manually setup the system and containers involved in our product, then used the component finder feature to automatically discover the components we have:
 
 > Note: For this to work you may need to add [structurizr-core and structurizr-spring](https://github.com/structurizr/java#getting-started) as test dependencies to your project.
-{:.quote-info}
+{:.quote--info}
 
 ```java
 @Test

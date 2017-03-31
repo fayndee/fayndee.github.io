@@ -13,17 +13,17 @@ portal:
         image: "/images/fang-shutterbug.jpg"
         link: /shutterbug
 ---
-<div class="portal-full">
-<a href="{{ page.portal.left.link }}">
-<div class="portal-half left" style="background-image:url({{ page.portal.left.image }});">
-<section id="left">
+<div class="portal">
+<a class="a--mono" href="{{ page.portal.left.link }}">
+<div class="portal__half portal__half--left" style="background-image:url({{ page.portal.left.image }});">
+<section>
 {{ page.portal.left.text }}
 </section>
 </div>
 </a>
-<a href="{{ page.portal.right.link }}">
-<div class="portal-half right" style="background-image:url({{ page.portal.right.image }});">
-<section id="right">
+<a class="a--mono" href="{{ page.portal.right.link }}">
+<div class="portal__half portal__half--right" style="background-image:url({{ page.portal.right.image }});">
+<section>
 {{ page.portal.right.text }}
 </section>
 </div>

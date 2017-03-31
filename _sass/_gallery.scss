@@ -14,7 +14,7 @@ $gallery-gutter: .6rem;
         transition: opacity .3s;
     }
 
-    &-album {
+    &__album {
         display: flex;
         position: relative;
         flex-direction: row;
@@ -25,7 +25,7 @@ $gallery-gutter: .6rem;
             height: 100vh;
         }
 
-        .title {
+        &__title {
             flex: none;
             position: absolute;
             right: 0;
@@ -39,8 +39,8 @@ $gallery-gutter: .6rem;
             }
         }
 
-        .gallery-album-fb,
-        .gallery-album-img {
+        &__img,
+        &__img-fallback {
             flex-grow: 1;
             object-fit: cover;
             background-size: cover;
@@ -49,14 +49,14 @@ $gallery-gutter: .6rem;
             width: auto;
             height: 100%;
         }
-    }
 
-    .object-fit & .gallery-album-fb {
-        display: none;
-    }
+        .object-fit .gallery &__img-fallback {
+            display: none;
+        }
 
-    .no-object-fit & .gallery-album-img {
-        display: none;
+        .no-object-fit .gallery &__img {
+            display: none;
+        }
     }
 }
 

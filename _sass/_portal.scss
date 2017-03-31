@@ -1,13 +1,13 @@
-.portal-full {
+.portal {
     width: 100%;
     height: 100%;
     @media only screen and (min-width: $screen-small) {
         .csstransitions &:hover {
-            .portal-half:hover {
+            .portal__half:hover {
                 width: 90%;
             }
 
-            .portal-half:not(:hover) {
+            .portal__half:not(:hover) {
                 width: 10%;
 
                 section {
@@ -16,65 +16,65 @@
             }
         }
     }
-}
 
-.portal-half {
-    width: 50%;
-    height: 100%;
-    transition: width 2s cubic-bezier(0, 0, 0, 1);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center bottom;
-    cursor: pointer;
-
-    section {
-        position: absolute;
-        top: 50%;
-        width: 14em;
-        height: 1em;
-        margin: auto 2em 2em;
-        padding: 0;
-        transition: opacity 2s cubic-bezier(0, 0, 0, 1);
-        @media only screen and (max-aspect-ratio: 1/1) {
-            top: 0;
-            bottom: auto;
-            margin-top: 2em;
-        }
-        @media only screen and (min-width: $screen-xlarge) {
-            font-size: 2em;
-        }
-        @media only screen and (min-width: $screen-large) and (max-width: $screen-xlarge - 1) {
-            font-size: 1.5em;
-        }
-        @media only screen and (min-width: $screen-small) and (max-width: $screen-medium - 1) {
-            font-size: .8em;
-        }
-        @media only screen and (max-width: $screen-small - 1) {
-            font-size: .6em;
-        }
-
-        h1 {
-            font-weight: bold;
-        }
-    }
-
-    &.left {
-        float: left;
-        color: $black;
+    &__half {
+        width: 50%;
+        height: 100%;
+        transition: width 2s cubic-bezier(0, 0, 0, 1);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center bottom;
+        cursor: pointer;
 
         section {
-            left: 0;
-            text-align: left;
+            position: absolute;
+            top: 50%;
+            width: 14em;
+            height: 1em;
+            margin: auto 2em 2em;
+            padding: 0;
+            transition: opacity 2s cubic-bezier(0, 0, 0, 1);
+            @media only screen and (max-aspect-ratio: 1/1) {
+                top: 0;
+                bottom: auto;
+                margin-top: 2em;
+            }
+            @media only screen and (min-width: $screen-xlarge) {
+                font-size: 2em;
+            }
+            @media only screen and (min-width: $screen-large) and (max-width: $screen-xlarge - 1) {
+                font-size: 1.5em;
+            }
+            @media only screen and (min-width: $screen-small) and (max-width: $screen-medium - 1) {
+                font-size: .8em;
+            }
+            @media only screen and (max-width: $screen-small - 1) {
+                font-size: .6em;
+            }
+
+            h1 {
+                font-weight: bold;
+            }
         }
-    }
 
-    &.right {
-        float: right;
-        color: $white;
+        &--left {
+            float: left;
+            color: $black;
 
-        section {
-            right: 0;
-            text-align: right;
+            section {
+                left: 0;
+                text-align: left;
+            }
+        }
+
+        &--right {
+            float: right;
+            color: $white;
+
+            section {
+                right: 0;
+                text-align: right;
+            }
         }
     }
 }

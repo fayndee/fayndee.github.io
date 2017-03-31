@@ -3,7 +3,7 @@ layout: page_framed_content
 title: About Fang Yuan as a Techie
 ---
 
-![](/images/fang-techie.jpg){:.img-about}
+![](/images/fang-techie.jpg){:.img--about}
 
 > # Think wilder, do milder.
 

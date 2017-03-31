@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 html {
     font-family: $font-paragraph;
     font-size: $font-size;
@@ -32,6 +27,37 @@ html {
 
         body {
             height: 100%;
+        }
+    }
+
+    &.techie {
+        body {
+            color: $black;
+            background-color: $white;
+        }
+
+        article .article-header {
+            background-color: $grey;
+        }
+
+        .article-list {
+            .article-header__caption,
+            .article-header__excerpt {
+                color: lighten($black, 70%);
+            }
+        }
+
+        footer {
+            background-color: $grey;
+        }
+    }
+
+    &.shutterbug {
+        body,
+        footer,
+        header {
+            color: $white;
+            background-color: $black;
         }
     }
 }
@@ -117,8 +143,8 @@ a:visited {
     cursor: pointer;
     text-decoration: none;
 
-    &.invert,
-    &.mono {
+    &.a--invert,
+    &.a--mono {
         color: inherit;
     }
 }
@@ -128,48 +154,66 @@ a:hover {
     text-decoration: none;
     transition: color .3s;
 
-    &.invert {
+    &.a--invert {
         color: $blue;
     }
 }
 
-img.img-about {
+section {
+    padding-top: $row-space;
+    padding-bottom: $row-space;
+    @include child-space;
+}
+
+blockquote {
+    position: relative;
+    font-style: italic;
+
+    .content &:not(.quote--info) {
+        font-family: $font-headline;
+
+        &:before {
+            position: absolute;
+            left: -2rem;
+            content: "\201C";
+            font-size: 4rem;
+            line-height: 2rem;
+        }
+
+        &:after {
+            position: absolute;
+            bottom: -.5rem;
+            content: "\201D";
+            font-size: 3rem;
+            line-height: 0;
+        }
+
+        & > * {
+            display: inline;
+            vertical-align: bottom;
+        }
+    }
+
+    .content &.quote--info {
+        margin-left: -$column-space;
+        border-left-width: $column-space / 2;
+        border-left-style: solid;
+        padding-left: $column-space / 2;
+    }
+}
+
+cite {
+    display: block;
+    font-style: italic;
+}
+
+img.img--about {
     overflow: hidden;
     margin-top: -15%;
     width: 100%;
 }
 
-.content {
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: $column-space;
-    padding-right: $column-space;
-    @media only screen and (min-width: $screen-xlarge) {
-        width: calc(#{$screen-large * .7} - #{$column-space * 2});
-    }
-    @media only screen and (min-width: $screen-large-xlarge) and (max-width: $screen-xlarge - 1) {
-        width: calc(#{$screen-large-xlarge * .75} - #{$column-space * 2});
-    }
-    @media only screen and (min-width: $screen-large) and (max-width: $screen-large-xlarge - 1) {
-        width: calc(#{$screen-large * .8} - #{$column-space * 2});
-    }
-    @media only screen and (min-width: $screen-medium-large) and (max-width: $screen-large - 1) {
-        width: calc(#{$screen-medium-large * .85} - #{$column-space * 2});
-    }
-    @media only screen and (min-width: $screen-medium) and (max-width: $screen-medium-large - 1) {
-        width: calc(#{$screen-medium * .9} - #{$column-space * 2});
-    }
-    @media only screen and (min-width: $screen-small-medium) and (max-width: $screen-medium - 1) {
-        width: calc(#{$screen-small-medium * .9} - #{$column-space * 2});
-    }
-    @media only screen and (min-width: $screen-small) and (max-width: $screen-small-medium - 1) {
-        width: calc(#{$screen-small * .9} - #{$column-space * 2});
-    }
-}
-
-.ie-alert {
+.alert-ie {
     position: static;
     top: 0;
     z-index: 1000;

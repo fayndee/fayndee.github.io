@@ -8,7 +8,7 @@ layout: page_framed
 {% include var/photo_attrs.liquid collection=photo_collection photo=photo %}
 {% if photo_album == page.album %}
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <a class="mono" href="{{ photo_original }}" itemprop="contentUrl">
+        <a class="a--mono" href="{{ photo_original }}" itemprop="contentUrl">
             <img src="{{ photo_thumbnail }}" srcset="{{ photo_srcset }}" title="{{ photo.title }}" itemprop="thumbnail" />
         </a>
         <figcaption itemprop="caption description">

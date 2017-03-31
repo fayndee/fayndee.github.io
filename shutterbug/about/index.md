@@ -3,7 +3,7 @@ layout: page_framed_content
 title: About Fang Yuan as a Shutterbug
 ---
 
-![](/images/fang-shutterbug.jpg){:.img-about}
+![](/images/fang-shutterbug.jpg){:.img--about}
 
 > # Wake up, there's more to photography.
 

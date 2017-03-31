@@ -5,15 +5,15 @@ layout: page_framed
 {% assign photos = site.photos | sort: 'date' | reverse %}
 <div class="gallery content">
 {% for album in photo_collection.albums %}
-    <a class="mono" href="{{ album }}">
-        <div class="gallery-album">
-            <h5 class="title">{{ album }}</h5>
+    <a class="a--mono" href="{{ album }}">
+        <div class="gallery__album">
+            <h5 class="gallery__album__title">{{ album }}</h5>
             {% assign n = 0 %}
             {% for photo in photos %}
             {% include var/photo_attrs.liquid collection=photo_collection photo=photo %}
             {% if photo_album == album %}
-            <img class="gallery-album-img" src="{{ photo_thumbnail }}" srcset="{{ photo_srcset }}" />
-            <div class="gallery-album-fb" style="background-image:url({{ photo_thumbnail }});"></div>
+            <img class="gallery__album__img" src="{{ photo_thumbnail }}" srcset="{{ photo_srcset }}" />
+            <div class="gallery__album__img-fallback" style="background-image:url({{ photo_thumbnail }});"></div>
             {% assign n = n | plus: 1 %}
             {% if n == photo_collection.preview %}{% break %}{% endif %}
             {% endif %}
