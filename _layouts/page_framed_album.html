@@ -4,10 +4,11 @@ layout: page_framed
 {% include var/photo_collection.liquid %}
 {% assign photos = site.photos | sort: 'date' | reverse %}
 <div class="album content" itemscope itemtype="http://schema.org/ImageGallery">
+{% assign photo_index = 0 %}
 {% for photo in photos %}
 {% include var/photo_attrs.liquid collection=photo_collection photo=photo %}
 {% if photo_album == page.album %}
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" data-index="{{ photo_index }}">
         <a class="a--mono" href="{{ photo_original }}" itemprop="contentUrl">
             <img src="{{ photo_thumbnail }}" srcset="{{ photo_srcset }}" title="{{ photo.title }}" itemprop="thumbnail" />
         </a>
@@ -16,6 +17,7 @@ layout: page_framed
             {{ photo.content }}
         </figcaption>
     </figure>
+{% assign photo_index = photo_index | plus: 1 %}
 {% endif %}
 {% endfor %}
 </div>
