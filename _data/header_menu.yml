@@ -1,7 +1,7 @@
 techie:
     -   name: blog
         description: My technical blog
-        url: /techie
+        url: /techie/blog
         target: _self
 
     -   name: about
@@ -12,7 +12,7 @@ techie:
 shutterbug:
     -   name: gallery
         description: My photo gallery
-        url: /shutterbug
+        url: /shutterbug/gallery
         target: _self
 
     -   name: about
