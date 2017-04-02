@@ -14,6 +14,9 @@
                 <button class="pswp__button pswp__button--share" title="Share"></button>
                 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
                 <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <button class="pswp__button pswp__button--info" title="Detailed information">
+                    <i class="icon-info"></i>
+                </button>
                 <div class="pswp__preloader">
                     <div class="pswp__preloader__icn">
                       <div class="pswp__preloader__cut">
@@ -64,6 +67,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 w: size[1],
                 h: size[2],
                 msrc: imgEl.getAttribute('src'), // thumbnail
+                id: figureEl.getAttribute('data-id'),
                 title: citeEl.innerHTML,
                 el: figureEl // save link to element for getThumbBoundsFn
             };
@@ -117,8 +121,9 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         return params;
     };
 
-    var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+    var openPhotoSwipe = function(index, galleryElement, disableAnimation) {
         var pswpElement = document.querySelectorAll('.pswp')[0],
+            pswpInfoButtonEl = document.querySelectorAll('.pswp__button--info')[0],
             gallery,
             options,
             items;
@@ -136,17 +141,18 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 {id:'facebook', label:'Share on Facebook', url:'https://www.facebook.com/sharer/sharer.php?u={{url}}'},
                 {id:'twitter', label:'Tweet', url:'https://twitter.com/intent/tweet?text={{text}}&url={{url}}'},
                 {id:'pinterest', label:'Pin it', url:'http://www.pinterest.com/pin/create/button/?url={{url}}&media={{image_url}}&description={{text}}'}
-            ]
+            ],
+            index: parseInt(index, 10) - 1 // slide index start from 1
         };
-        if (fromURL) {
-            options.index = parseInt(index, 10) - 1; // in URL indexes start from 1
-        } else {
-            options.index = parseInt(index, 10);
-        }
         if (disableAnimation) {
             options.showAnimationDuration = 0;
         }
         gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+        gallery.listen('afterChange', function() {
+            pswpInfoButtonEl.onclick = function(e) {
+                window.location.href = '../' + gallery.currItem.id + '/';
+            }
+        });
         gallery.init();
     };
 

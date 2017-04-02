@@ -13,13 +13,22 @@ collections:
       - fine-art
       - people
     preview: 3
+    output: true
+    permalink: /shutterbug/gallery/:title/
 defaults:
   - scope:
-      path: techie
+      path: ''
       type: posts
     values:
       layout: page_framed_article
+      type: article
       teaser_image: article_teaser.jpg
+  - scope:
+      path: ''
+      type: photos
+    values:
+      layout: page_framed_photo
+      type: photo
 
 # Settings
 sass:

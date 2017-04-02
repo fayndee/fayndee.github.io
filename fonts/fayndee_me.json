@@ -82,6 +82,12 @@
       "css": "right",
       "code": 59395,
       "src": "mfglabs"
+    },
+    {
+      "uid": "ccd52a22af21fbaa98a9c85fb50fca6b",
+      "css": "info",
+      "code": 59396,
+      "src": "iconic"
     }
   ]
 }

@@ -73,8 +73,6 @@ $gallery-gutter: .6rem;
 
         img {
             float: left;
-            object-fit: contain;
-            overflow: hidden;
             width: 65%;
             margin-right: 1%;
             @media only screen and (max-width:$screen-small - 1) {
@@ -103,9 +101,39 @@ $gallery-gutter: .6rem;
     }
 }
 
+.photo {
+    padding-top: $gallery-gutter;
+    @include child-space($row-space);
+
+    a {
+        display: block;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    figcaption {
+        @include child-space($row-space);
+
+        cite {
+            @extend h4;
+        }
+    }
+}
+
 .pswp {
-    .pswp__caption__center {
+    &__caption__center {
         @extend cite;
         text-align: center;
+    }
+
+    &__button--info {
+        background-image: none !important;
+
+        i {
+            font-size: 16px;
+            line-height: 44px;
+        }
     }
 }

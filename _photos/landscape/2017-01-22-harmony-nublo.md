@@ -1,4 +1,5 @@
 ---
+album: landscape
 ---
 Roque Nublo in Gran Canaria, Spain. One of the most popular location on the island.
 

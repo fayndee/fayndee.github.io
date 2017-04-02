@@ -1,0 +1,6 @@
+{% for _item in include.array %}
+    {% if _item == include.item %}
+        {% assign index = forloop.index %}
+        {% break %}
+    {% endif %}
+{% endfor %}

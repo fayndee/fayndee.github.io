@@ -1,0 +1,10 @@
+{% assign photos = site.photos | sort: 'date' | reverse %}
+{% if include.album %}
+    {% include var/new_array.liquid %}
+    {% for _photo in photos %}
+        {% if _photo.album == include.album %}
+            {% assign _array = _array | push: _photo %}
+        {% endif %}
+    {% endfor %}
+    {% assign photos = _array %}
+{% endif %}

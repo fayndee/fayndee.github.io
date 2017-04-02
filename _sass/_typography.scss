@@ -50,7 +50,8 @@ html {
     }
 
     &.shutterbug {
-        body {
+        body,
+        button {
             color: $white;
             background-color: $black;
         }

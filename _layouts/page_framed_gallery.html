@@ -2,7 +2,7 @@
 layout: page_framed
 ---
 {% include var/photo_collection.liquid %}
-{% assign photos = site.photos | sort: 'date' | reverse %}
+{% include var/photos.liquid %}
 <div class="gallery content">
 {% for album in photo_collection.albums %}
     <a class="a--mono" href="{{ album }}">
@@ -10,8 +10,8 @@ layout: page_framed
             <h5 class="gallery__album__title">{{ album }}</h5>
             {% assign n = 0 %}
             {% for photo in photos %}
-            {% include var/photo_attrs.liquid collection=photo_collection photo=photo %}
-            {% if photo_album == album %}
+            {% if photo.album == album %}
+            {% include var/photo_attrs.liquid photo=photo %}
             <img class="gallery__album__img" src="{{ photo_thumbnail }}" srcset="{{ photo_srcset }}" />
             <div class="gallery__album__img-fallback" style="background-image:url({{ photo_thumbnail }});"></div>
             {% assign n = n | plus: 1 %}

@@ -1,5 +1,9 @@
-{% assign photo_album = include.photo.path | remove: include.collection.relative_directory | remove_first: '/' | split: '/' | first %}
-{% assign photo_name = include.photo.title | replace: ' ', '_' | downcase %}
+{% assign photo = include.photo %}
+{% unless photo %}
+    {% assign photo = site.photos | where: 'title', page.title | first %}
+{% endunless %}
+{% assign photo_id = photo.title | slugify %}
+{% assign photo_name = photo_id | replace: '-', '_' %}
 {% assign photo_files = site.static_files | where_exp: 'file', 'file.basename contains photo_name' %}
 {% include var/new_array.liquid %}
 {% for _file in photo_files %}
