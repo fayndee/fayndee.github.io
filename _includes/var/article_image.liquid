@@ -1,3 +1,4 @@
-{% include var/theme.liquid page=include.article %}
-{% include var/date_string.liquid page=include.article %}
+{% assign _article = include.article | default: page %}
+{% include var/theme.liquid page=_article %}
+{% include var/date_string.liquid page=_article %}
 {% capture article_image %}/images/blog/{{ theme }}/{{ date_string }}/{{ include.image }}{% endcapture %}

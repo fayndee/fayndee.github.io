@@ -1,6 +1,7 @@
 ---
 layout: page_framed_content
 title: About Fang Yuan as a Shutterbug
+teaser_image: /images/fang-shutterbug.jpg
 ---
 
 ![](/images/fang-shutterbug.jpg){:.img--about}

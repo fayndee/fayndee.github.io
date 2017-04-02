@@ -1,6 +1,7 @@
 ---
 layout: page_framed_content
 title: About Fang Yuan as a Techie
+teaser_image: /images/fang-techie.jpg
 ---
 
 ![](/images/fang-techie.jpg){:.img--about}
