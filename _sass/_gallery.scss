@@ -97,6 +97,10 @@ $gallery-gutter: .6rem;
                 padding-left: 0;
                 border-left: none;
             }
+
+            span {
+                @include child-space($gallery-gutter);
+            }
         }
     }
 }
@@ -107,6 +111,8 @@ $gallery-gutter: .6rem;
 
     a {
         display: block;
+        margin-left: -$column-space;
+        margin-right: -$column-space;
     }
 
     img {

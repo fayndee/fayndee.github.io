@@ -1,32 +1,30 @@
 {% assign _article = include.article | default: page %}
-<section class="article-header content">
-{% if include.excerpt %}
-<a class="a--mono" href="{{ _article.url }}" title="{{ _article.title }}">
+<section class="article-header content" itemscope itemtype="http://schema.org/Article">
+{% if include.link %}
+<a class="a--mono" href="{{ _article.url }}" title="{{ _article.title }}" itemprop="url">
 {% endif %}
 <h6 class="article-header__caption">
-<span>{{ _article.tags | join: ', ' | downcase }}</span>
-<time>{{ _article.date | date: '%b %e, %Y' | downcase }}</time>
+    <span itemprop="about">{{ _article.tags | join: ', ' | downcase }}</span>
+    <time itemprop="datePublished">{{ _article.date | date: '%b %e, %Y' | downcase }}</time>
 </h6>
-{% if include.teaser %}
 <div class="article-header__grid">
-{% include var/article_image.liquid article=_article image=_article.teaser_image %}
-<figure style="background-image:url({{ article_image }});"></figure>
-<aside>
-{% endif %}
-<h1 class="article-header__title">{{ _article.title }}</h1>
-{% if include.author %}
-<h6><span class="article-header__caption">written by</span></h6>
-<h5 class="article-header__author">{{ page.author | default: site.author }}</h5>
-{% endif %}
-{% if include.excerpt %}
-<p>
-<span class="article-header__excerpt">{{ _article.excerpt | strip_html | strip }} ...</span>
-{{ site.data.label.read_more }}
-</p>
-{% if include.teaser %}
-</aside>
+    {% include var/article_image.liquid article=_article image=_article.teaser_image %}
+    <figure style="background-image:url({{ article_image }});" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+        <img src="{{ article_image }}" alt="{{ _article.title }}" itemprop="contentUrl url">
+    </figure>
+    <aside>
+        <h1 class="article-header__title" itemprop="name headline">{{ _article.title }}</h1>
+        <h6 class="article-header__caption--inline">written by</h6>
+        <h5 class="article-header__author" itemprop="author">{{ page.author | default: site.author.name }}</h5>
+        <p class="article-header__excerpt">
+            <span class="article-header__excerpt__text" itemprop="description">
+                {{ _article.excerpt | strip_html | strip }} ...
+            </span>
+            {{ site.data.label.read_more }}
+        </p>
+    </aside>
 </div>
-{% endif %}
+{% if include.link %}
 </a>
 {% endif %}
 </section>

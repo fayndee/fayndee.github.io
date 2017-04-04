@@ -2,6 +2,8 @@
 layout: page_framed_content
 title: About Fang Yuan as a Techie
 teaser_image: /images/fang-techie.jpg
+excerpt: "I'm Fang Yuan, a single-minded developer with a wide open mindset. I embrace \"learning by
+    doing\" and believe all the brilliant ideas are born from the practice."
 ---
 
 ![](/images/fang-techie.jpg){:.img--about}

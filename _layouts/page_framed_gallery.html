@@ -6,13 +6,13 @@ layout: page_framed
 <div class="gallery content">
 {% for album in photo_collection.albums %}
     <a class="a--mono" href="{{ album }}">
-        <div class="gallery__album">
-            <h5 class="gallery__album__title">{{ album }}</h5>
+        <div class="gallery__album" itemscope itemtype="http://schema.org/ImageGallery">
+            <h5 class="gallery__album__title" itemprop="name">{{ album }}</h5>
             {% assign n = 0 %}
             {% for photo in photos %}
             {% if photo.album == album %}
             {% include var/photo_attrs.liquid photo=photo %}
-            <img class="gallery__album__img" src="{{ photo_thumbnail }}" srcset="{{ photo_srcset }}" />
+            <img class="gallery__album__img" src="{{ photo_thumbnail }}" srcset="{{ photo_srcset }}" itemprop="url" />
             <div class="gallery__album__img-fallback" style="background-image:url({{ photo_thumbnail }});"></div>
             {% assign n = n | plus: 1 %}
             {% if n == photo_collection.preview %}{% break %}{% endif %}

@@ -148,11 +148,9 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             options.showAnimationDuration = 0;
         }
         gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-        gallery.listen('afterChange', function() {
-            pswpInfoButtonEl.onclick = function(e) {
-                window.location.href = '../' + gallery.currItem.id + '/';
-            }
-        });
+        pswpInfoButtonEl.onclick = function(e) {
+            window.location.href = '../' + gallery.currItem.id + '/';
+        }
         gallery.init();
     };
 
@@ -161,7 +159,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     galleryElements[0].onclick = onFigureClick;
     var hashData = parsePhotoswipeHash();
     if (hashData.pid && hashData.gid) {
-        openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+        openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true);
     }
 };
 </script>

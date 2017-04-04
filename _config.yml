@@ -1,8 +1,12 @@
 # Info
-title: fayndee.me
+name: fayndee.me
 description: A little space where I share about my work and passion.
 url: http://fayndee.me
-author: Fang Yuan
+author:
+  name: Fang Yuan
+  twitter: "@fayndee"
+  facebook: fayndee
+facebook_app_id: 268895170226028
 
 # Data
 collections:

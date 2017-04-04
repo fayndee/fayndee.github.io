@@ -6,12 +6,12 @@ layout: page_framed
 {% for photo in photos %}
     {% include var/photo_attrs.liquid photo=photo %}
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" data-id="{{ photo_id }}" data-index="{{ forloop.index }}">
-        <a class="a--mono" href="{{ photo_original }}" itemprop="contentUrl">
+        <a class="a--mono" href="{{ photo_original }}" itemprop="contentUrl url">
             <img src="{{ photo_thumbnail }}" srcset="{{ photo_srcset }}" title="{{ photo.title }}" itemprop="thumbnail" />
         </a>
-        <figcaption itemprop="caption description">
-            <cite>{{ photo.title }}</cite>
-            {{ photo.content }}
+        <figcaption>
+            <cite itemprop="caption name">{{ photo.title }}</cite>
+            <span itemprop="description">{{ photo.content }}</span>
         </figcaption>
     </figure>
 {% endfor %}

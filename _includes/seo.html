@@ -1,7 +1,7 @@
 {% assign page_type = page.type | default: 'other' %}
 {% capture page_url %}{{ page.url | replace: 'index.html', '' | prepend: site.url }}{% endcapture %}
-{% assign page_title = page.title | append: '' | truncate: 70 %}
-{% assign page_description = page.excerpt | default: site.description | strip_html | truncate: 155 %}
+{% assign page_title = page.title | append: '' | truncate: 150 %}
+{% assign page_description = page.excerpt | default: site.description | strip_html | xml_escape | truncate: 300 %}
 {% case page_type %}
     {% when 'article' %}
         {% include var/article_image.liquid image=page.teaser_image %}
@@ -15,24 +15,44 @@
 {% if page_image %}
     {% assign page_image = page_image | prepend: site.url %}
 {% endif %}
-<title>{{ page_title }} | {{ site.title }}</title>
+<title>{{ page_title }} | {{ site.name }}</title>
 <meta name="description" content="{{ page_description }}" />
-
-<!-- Schema.org -->
-<meta itemprop="name" content="{{ page_title }}">
-<meta itemprop="description" content="{{ page_description }}">
-{% if page_image %}<meta itemprop="image" content="{{ page_image }}">{% endif %}
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="{{ page_title }}">
-<meta name="twitter:description" content="{{ page_description }}">
-{% if page_image %}<meta name="twitter:image:src" content="{{ page_image }}">{% endif %}
-<meta name="twitter:creator" content="@fayndee">
-
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="{{ site.author.twitter }}" />
 <!-- Open Graph -->
-<meta property="og:type" content="{{ page_type }}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{ page_url }}" />
 <meta property="og:title" content="{{ page_title }}" />
 <meta property="og:description" content="{{ page_description }}" />
 {% if page_image %}<meta property="og:image" content="{{ page_image }}" />{% endif %}
-<meta property="og:url" content="{{ page_url }}" />
+<meta property="og:site_name" content="{{ site.name }}" />
+<meta property="article:author" content="{{ site.author.facebook }}" />
+<meta property="fb:app_id" content="{{ site.facebook_app_id }}" />
+{% if page_type == 'other' %}
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "url": "{{ page_url }}",
+    "name": "{{ page_title }}",
+    "headline": "{{ page_title }}",
+    "description": "{{ page_description }}",
+    {% if page_image %}
+    "image": {
+        "@type": "ImageObject",
+        "url": "{{ page_image }}"
+    },
+    {% endif %}
+    "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.name }}"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "{{ site.author.name }}"
+    }
+}
+</script>
+{% endif %}

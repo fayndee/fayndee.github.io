@@ -1,12 +1,6 @@
+$article-hero-height: 30rem;
+
 .article-header {
-    time {
-        float: right;
-    }
-
-    i.icon-right {
-        display: none;
-    }
-
     a {
         @include child-space;
 
@@ -15,10 +9,26 @@
         }
     }
 
-    &__caption {
+    &__caption,
+    &__caption--inline {
         border-bottom-width: 1px;
         border-bottom-style: solid;
         padding-bottom: .5em;
+    }
+
+    time {
+        float: right;
+    }
+
+    aside {
+        @include child-space;
+    }
+
+    &__author,
+    &__caption--inline,
+    figure,
+    i.icon-right {
+        display: none;
     }
 
     &__excerpt {
@@ -26,41 +36,7 @@
             display: none;
         }
     }
-
-    &__grid {
-        display: flex;
-        flex-direction: row;
-        @media only screen and (max-width: $screen-small-medium - 1) {
-            flex-direction: column;
-        }
-
-        figure {
-            flex: none;
-            width: 12rem;
-            height: 12rem;
-            margin-right: $column-space;
-            background-size: cover;
-            background-position: center center;
-            @media only screen and (max-width: $screen-small-medium - 1) {
-                width: 100%;
-                height: 20rem;
-                margin-right: 0;
-                margin-bottom: $row-space;
-            }
-        }
-
-        aside {
-            flex: auto;
-            @include child-space;
-
-            .article-header__title {
-                @extend h2;
-            }
-        }
-    }
 }
-
-$article-hero-height: 30rem;
 
 .article-hero {
     position: relative;
@@ -79,7 +55,88 @@ $article-hero-height: 30rem;
     }
 }
 
+.article-list .article-header {
+    &__grid {
+        display: flex;
+        flex-direction: row;
+        @media only screen and (max-width: $screen-small-medium - 1) {
+            flex-direction: column;
+        }
+    }
+
+    figure {
+        display: block;
+        flex: none;
+        width: 12rem;
+        height: 12rem;
+        margin-right: $column-space;
+        @media only screen and (max-width: $screen-small-medium - 1) {
+            width: 100%;
+            height: 20rem;
+            margin-right: 0;
+            margin-bottom: $row-space;
+        }
+    }
+
+    .object-fit & figure {
+        background: none;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .no-object-fit & figure {
+        background-size: cover;
+        background-position: center center;
+
+        img {
+            display: none;
+        }
+    }
+
+    aside {
+        flex: auto;
+        @include child-space;
+
+        .article-header__title {
+            @extend h2;
+        }
+    }
+}
+
 article {
+    .article-hero {
+        position: inherit;
+    }
+
+    .article-header {
+        margin-top: -$article-hero-height / 3;
+
+        &__caption--inline {
+            display: inline-block;
+        }
+
+        &__author {
+            display: block;
+        }
+
+        aside {
+            & > .article-header__caption--inline {
+                margin-bottom: $row-space / 2;
+            }
+            & > .article-header__author {
+                margin-bottom: 0;
+            }
+        }
+
+        &__excerpt {
+            display: none;
+        }
+    }
+
     figure {
         margin-left: -$column-space;
         margin-right: -$column-space;
@@ -95,14 +152,6 @@ article {
         padding: $row-space $column-space;
         white-space: pre-wrap;
         word-break: break-all;
-    }
-
-    .article-hero {
-        position: inherit;
-    }
-
-    .article-header {
-        margin-top: -$article-hero-height / 3;
     }
 
     [class^=language-] {

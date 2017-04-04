@@ -4,12 +4,12 @@ layout: page_framed
 {% include var/photo_attrs.liquid %}
 {% include var/photos.liquid album=photo.album %}
 {% include var/index.liquid array=photos item=photo %}
-<figure class="photo content" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" data-id="{{ photo_id }}" data-index="{{ index }}">
-    <a class="a--mono" href="../{{ photo.album }}/#&amp;gid=1&amp;pid={{ index }}" itemprop="contentUrl">
+<figure class="photo content" itemscope itemtype="http://schema.org/ImageObject">
+    <a class="a--mono" href="../{{ photo.album }}/#&amp;gid=1&amp;pid={{ index }}">
         <img src="{{ photo_thumbnail }}" srcset="{{ photo_srcset }}" title="{{ photo.title }}" itemprop="thumbnail" />
     </a>
-    <figcaption itemprop="caption description">
-        <cite>{{ photo.title }}</cite>
-        {{ photo.content }}
+    <figcaption>
+        <cite itemprop="caption name">{{ photo.title }}</cite>
+        <span itemprop="description">{{ photo.content }}</span>
     </figcaption>
 </figure>

@@ -1,6 +1,7 @@
 ---
 title: API documentation as code with Swagger, AsciiDoc, Cucumber and Structurizr
 tags: API Java
+excerpt: As a developer, code is probably our only best friend. Whatever can best describe our code is probably the best documentation we could get.
 ---
 
 With the growing love of API at zooplus, more our apps & services are provided with a RESTful API. We love RESTful API because it's simple and flexible.

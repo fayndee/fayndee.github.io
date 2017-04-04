@@ -2,6 +2,9 @@
 layout: page_framed_content
 title: About Fang Yuan as a Shutterbug
 teaser_image: /images/fang-shutterbug.jpg
+excerpt: "I'm Fang Yuan, a photography enthusiast who believes in all good things. Like a child,
+    I love magical lights, sharp reflections, and diverse colors. The eyes of observing beauty are
+    I always believe to have."
 ---
 
 ![](/images/fang-shutterbug.jpg){:.img--about}
