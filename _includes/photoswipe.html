@@ -137,11 +137,16 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
             },
             barsSize: {top:44, bottom:44},
+            {% raw %}
             shareButtons: [
                 {id:'facebook', label:'Share on Facebook', url:'https://www.facebook.com/sharer/sharer.php?u={{url}}'},
                 {id:'twitter', label:'Tweet', url:'https://twitter.com/intent/tweet?text={{text}}&url={{url}}'},
                 {id:'pinterest', label:'Pin it', url:'http://www.pinterest.com/pin/create/button/?url={{url}}&media={{image_url}}&description={{text}}'}
             ],
+            {% endraw %}
+            getPageURLForShare: function( shareButtonData ) {
+                return "{{ '/shutterbug/gallery/' | absolute_url }}" + gallery.currItem.id;
+            },
             index: parseInt(index, 10) - 1 // slide index start from 1
         };
         if (disableAnimation) {
@@ -149,7 +154,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         }
         gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
         pswpInfoButtonEl.onclick = function(e) {
-            window.location.href = '../' + gallery.currItem.id + '/';
+            window.location.href = "{{ '/shutterbug/gallery/' | absolute_url }}" + gallery.currItem.id;
         }
         gallery.init();
     };
