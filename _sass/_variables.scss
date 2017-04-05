@@ -6,7 +6,8 @@ $font-size            : 16px;
 // Color
 $black                : #000;
 $white                : #fff;
-$grey                 : darken($white, 5%);
+$light-grey           : darken($white, 5%);
+$dark-grey            : lighten($black, 10%);
 $blue                 : #248fec;
 
 // Screen

@@ -1,9 +1,16 @@
 $gallery-row-height: 10rem;
 $gallery-gutter: .6rem;
 
-.gallery {
+.album,
+.gallery,
+.photo {
     padding-top: $gallery-gutter;
-    @include child-space($row-space);
+    padding-bottom: $row-space;
+    @include child-space;
+}
+
+.gallery {
+    padding-bottom: $gallery-gutter;
 
     &:hover > a:not(:hover) {
         opacity: .7;
@@ -61,9 +68,6 @@ $gallery-gutter: .6rem;
 }
 
 .album {
-    padding-top: $gallery-gutter;
-    @include child-space($row-space);
-
     figure {
         &:after {
             display: block;
@@ -106,9 +110,6 @@ $gallery-gutter: .6rem;
 }
 
 .photo {
-    padding-top: $gallery-gutter;
-    @include child-space($row-space);
-
     a {
         display: block;
         margin-left: -$column-space;
@@ -120,10 +121,14 @@ $gallery-gutter: .6rem;
     }
 
     figcaption {
-        @include child-space($row-space);
+        @include child-space;
 
         cite {
             @extend h4;
+        }
+
+        span {
+            @include child-space;
         }
     }
 }

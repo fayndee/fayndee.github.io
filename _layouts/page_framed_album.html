@@ -11,10 +11,11 @@ layout: page_framed
         </a>
         <figcaption>
             <cite itemprop="caption name">{{ photo.title }}</cite>
-            <span itemprop="description">{{ photo.content }}</span>
+            <span itemprop="description">{{ photo.excerpt }}</span>
         </figcaption>
     </figure>
 {% endfor %}
 </div>
 {% include photoswipe.html %}
 <script>initPhotoSwipeFromDOM('.album');</script>
+{% include disqus.html %}
