@@ -147,6 +147,9 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             getPageURLForShare: function( shareButtonData ) {
                 return "{{ '/shutterbug/gallery/' | absolute_url }}" + gallery.currItem.id;
             },
+            getImageURLForShare: function( shareButtonData ) {
+                return "{{ site.url }}/" + gallery.currItem.src;
+            },
             index: parseInt(index, 10) - 1 // slide index start from 1
         };
         if (disableAnimation) {
