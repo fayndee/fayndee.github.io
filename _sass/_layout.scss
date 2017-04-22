@@ -11,7 +11,7 @@
     padding-left: $column-space;
     padding-right: $column-space;
     @media only screen and (min-width: $screen-xlarge) {
-        width: calc(#{$screen-large * .7} - #{$column-space * 2});
+        width: calc(#{$screen-xlarge * .7} - #{$column-space * 2});
     }
     @media only screen and (min-width: $screen-large-xlarge) and (max-width: $screen-xlarge - 1) {
         width: calc(#{$screen-large-xlarge * .75} - #{$column-space * 2});

@@ -28,8 +28,13 @@ $gallery-gutter: .6rem;
         width: 100%;
         height: $gallery-row-height;
         @media only screen and (max-width: $screen-small - 1) {
-            flex-direction: column;
-            height: 100vh;
+            .object-fit .gallery & {
+                height: auto;
+            }
+
+            .no-object-fit .gallery & {
+                height: $gallery-row-height * 2;
+            }
         }
 
         &__title {
@@ -55,6 +60,16 @@ $gallery-gutter: .6rem;
             overflow: hidden;
             width: auto;
             height: 100%;
+            @media only screen and (max-width: $screen-small - 1) {
+                display: none;
+            }
+        }
+
+        &__img--0,
+        &__img-fallback--0 {
+            @media only screen and (max-width: $screen-small - 1) {
+                display: inherit;
+            }
         }
 
         .object-fit .gallery &__img-fallback {
@@ -110,7 +125,7 @@ $gallery-gutter: .6rem;
 }
 
 .photo {
-    a {
+    &__link {
         display: block;
         margin-left: -$column-space;
         margin-right: -$column-space;
@@ -120,16 +135,21 @@ $gallery-gutter: .6rem;
         width: 100%;
     }
 
-    figcaption {
+    &__title {
+        @extend h4;
+        display: inline-block;
+        border-bottom: 1px solid;
+        padding-bottom: $row-space / 2;
+    }
+
+    &__exif {
+        @extend h6;
+        margin-top: $row-space / 4;
+        margin-bottom: $row-space;
+    }
+
+    &__description {
         @include child-space;
-
-        cite {
-            @extend h4;
-        }
-
-        span {
-            @include child-space;
-        }
     }
 }
 

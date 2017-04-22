@@ -12,6 +12,7 @@ facebook_app_id: 268895170226028
 collections:
   photos:
     albums:
+      - dolomites
       - landscape
       - cityscape
       - fine-art

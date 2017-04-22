@@ -15,6 +15,11 @@ shutterbug:
         url: /shutterbug/gallery
         target: _self
 
+    -   name: blog
+        description: My photography blog
+        url: /shutterbug/blog
+        target: _self
+
     -   name: about
         description: About me as a Shutterbug
         url: /shutterbug/about

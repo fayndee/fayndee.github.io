@@ -1,0 +1,2 @@
+{% assign _title = include.title | default: page.title %}
+{% assign photo = site.photos | where: 'title', _title | first %}

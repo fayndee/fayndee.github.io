@@ -1,0 +1,7 @@
+{% include var/photo_attrs.liquid title=include.title %}
+<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <img src="{{ photo_thumbnail }}" srcset="{{ photo_srcset }}" title="{{ photo.title }}" itemprop="thumbnail" />
+    <figcaption>
+        <cite itemprop="caption name">{{ photo.title }} | {{ photo_exif }}</cite>
+    </figcaption>
+</figure>

@@ -2,9 +2,14 @@
 layout: page_framed
 ---
 {% include var/theme.liquid %}
+{% if theme == 'techie' %}
+    {% assign article_hero_gradient = 'linear-gradient(rgba(255,255,255,0),rgba(255,255,255,.7))' %}
+{% else %}
+    {% assign article_hero_gradient = 'linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7))' %}
+{% endif %}
 {% assign latest = site.categories[theme].first %}
 {% include var/article_image.liquid article=latest image=latest.teaser_image %}
-<div class="article-hero" style="background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7)),url({{ article_image }});">
+<div class="article-hero" style="background-image:{{ article_hero_gradient }},url({{ article_image }});">
 {% include article_header.html article=latest link=true %}
 </div>
 <div class="article-list">

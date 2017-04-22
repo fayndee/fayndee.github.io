@@ -1,5 +1,9 @@
 {% include var/article_image.liquid article=include.article image=include.image %}
-<figure class="image">
-<img src="{{ article_image }}" alt="{{ include.caption }}">
-{% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <img src="{{ article_image }}" title="{{ include.caption }}" itemprop="thumbnail" />
+    {% if include.caption %}
+    <figcaption>
+        <cite itemprop="caption name">{{ include.caption }}</cite>
+    </figcaption>
+    {% endif %}
 </figure>

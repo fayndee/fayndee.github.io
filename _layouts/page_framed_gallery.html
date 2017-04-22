@@ -12,8 +12,8 @@ layout: page_framed
             {% for photo in photos %}
             {% if photo.album == album %}
             {% include var/photo_attrs.liquid photo=photo %}
-            <img class="gallery__album__img" src="{{ photo_thumbnail }}" srcset="{{ photo_srcset }}" itemprop="url" />
-            <div class="gallery__album__img-fallback" style="background-image:url({{ photo_thumbnail }});"></div>
+            <img class="gallery__album__img gallery__album__img--{{ n }}" src="{{ photo_thumbnail }}" srcset="{{ photo_srcset }}" itemprop="url" />
+            <div class="gallery__album__img-fallback gallery__album__img-fallback--{{ n }}" style="background-image:url({{ photo_thumbnail }});"></div>
             {% assign n = n | plus: 1 %}
             {% if n == photo_collection.preview %}{% break %}{% endif %}
             {% endif %}

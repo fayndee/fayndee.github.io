@@ -5,12 +5,13 @@ layout: page_framed
 {% include var/photos.liquid album=photo.album %}
 {% include var/index.liquid array=photos item=photo %}
 <figure class="photo content" itemscope itemtype="http://schema.org/ImageObject">
-    <a class="a--mono" href="../{{ photo.album }}/#&amp;gid=1&amp;pid={{ index }}">
+    <a class="photo__link a--mono" href="../{{ photo.album }}/#&amp;gid=1&amp;pid={{ index }}">
         <img src="{{ photo_thumbnail }}" srcset="{{ photo_srcset }}" title="{{ photo.title }}" itemprop="thumbnail" />
     </a>
     <figcaption>
-        <cite itemprop="caption name">{{ photo.title }}</cite>
-        <span itemprop="description">{{ photo.content }}</span>
+        <cite class="photo__title" itemprop="caption name">{{ photo.title }}</cite>
+        <cite class="photo__exif" itemprop="exifData">{{ photo_exif }}</cite>
+        <div class="photo__description" itemprop="description">{{ photo.content }}</div>
     </figcaption>
 </figure>
 {% include disqus.html %}
