@@ -156,10 +156,10 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             options.showAnimationDuration = 0;
         }
         gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-        pswpInfoButtonEl.onclick = function(e) {
-            window.location.href = "{{ '/shutterbug/gallery/' | absolute_url }}" + gallery.currItem.id;
-        }
         gallery.init();
+        gallery.framework.bind(pswpInfoButtonEl, 'pswpTap click', function(e) {
+            window.location.href = "{{ '/shutterbug/gallery/' | absolute_url }}" + gallery.currItem.id;
+        });
     };
 
     var galleryElements = document.querySelectorAll(gallerySelector);
