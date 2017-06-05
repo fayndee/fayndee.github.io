@@ -11,3 +11,5 @@ filters: circular polariser
 A shot of minimal people in the landscape which highlights the size of the Josefsthaler Waterfall.
 
 The waterfall is located in a small Bavaria town called Josefsthal. It's only 10 mins walk from the nearest parking place.
+
+[Read more](<{% link shutterbug/blog/_posts/2017-05-30-waterfall-photography-spring-time-josefsthal.md %}>) about this shot.

@@ -13,3 +13,5 @@ A spring adventure at Josefsthaler Waterfall.
 The waterfall is located in a small Bavaria town called Josefsthal. It's only 10 mins walk from the nearest parking place.
 
 The weather was a bit cloudy, perfect for this kind of shot. The capture was taken when the sunlight has penetrated into the forest, casting a nice warm color on the leaves.
+
+[Read more](<{% link shutterbug/blog/_posts/2017-05-30-waterfall-photography-spring-time-josefsthal.md %}>) about this shot.
