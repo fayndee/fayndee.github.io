@@ -10,4 +10,4 @@ filters: circular polariser
 
 A shot of minimal people in the landscape which highlights the size of the Josefsthaler Waterfall.
 
-The waterfall is located in a small Bavaria town called Josefsthaler. It's only 10 mins walk from the nearest parking place.
+The waterfall is located in a small Bavaria town called Josefsthal. It's only 10 mins walk from the nearest parking place.
