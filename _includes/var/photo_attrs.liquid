@@ -4,7 +4,8 @@
 {% endunless %}
 {% assign photo_id = photo.title | slugify %}
 {% assign photo_name = photo_id | replace: '-', '_' %}
-{% assign photo_files = site.static_files | where_exp: 'file', 'file.basename contains photo_name' %}
+{% assign _prefix = photo_name | append: '_' %}
+{% assign photo_files = site.static_files | where_exp: 'file', 'file.basename contains _prefix' %}
 {% include var/new_array.liquid %}
 {% for _file in photo_files %}
     {% assign _width = _file.basename | remove: photo_name | remove: '_' | split: 'x' | first | to_integer %}
