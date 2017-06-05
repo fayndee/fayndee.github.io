@@ -5,7 +5,7 @@ focal_length: 17mm
 iso: iso100
 aperture: f8
 shutter_speed: 180s
-filters: nd 3.0 | cp
+filters: nd 3.0 | circular polariser
 ---
 
 Reflected Latemar mountain in the crystal Lake Karersee.

@@ -4,7 +4,7 @@ focal_length: 130mm
 iso: iso100
 aperture: f8
 shutter_speed: 45s
-filters: nd 3.0 | cp
+filters: nd 3.0 | circular polariser
 ---
 
 Rosengarten mountain in the sunset glow.
