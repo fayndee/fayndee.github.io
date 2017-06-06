@@ -22,13 +22,17 @@ You can park your car right before the road turns to gravel. From there it's a l
 
 The idea of my first shot is to capture the waterfall on a large scale while having one person (that's me :P) standing in front of it, to create a scale comparison. It emphasizes the massive landscape by putting a tiny human into the scene to give a bit of loneliness but powerful feeling to the reader.
 
-I've first learned this technique from the talented Dutch mountain photographer Max Rive. I'm sure the technique exists long before but the ones taken by Max Rive are absolutely breathtaking.
+I've first learned this technique from the [talented Dutch mountain photographer - Max Rive](http://www.maxrivephotography.com/). I'm sure the technique exists long before but the pictures taken by Max Rive using this technique are absolutely breathtaking.
 
 For the shutter speed, I found 0.4 seconds is good enough to smooth the water flow while capturing a sharp person at the same time. Of course, I can also take two shots, with and without a person, then bend them together in post processing. But I'm a lazy guy, so I'll try to capture the image I want in the field as much as I can.
 
 {% include photo.html title='Spring Wonder' %}
 
-To take the shot, I was trying to hold still as much as possible, but I have no influence on my little daughter's behavior :(. So to increase the chance of success here is another technique I've learned from Max Rive: set your camera with an intervalometer to continuously capture images every few seconds and take as many of them as needed to be able to pick a satisfied one in the end. That's exactly what I did and it works like a charm.
+To take the shot, I was trying to hold still as much as possible, but I have no influence on my little daughter's behavior. So to increase the chance of success here is another technique I've learned from Max Rive:
+
+> Set your camera with an intervalometer to continuously capture images every few seconds and take as many of them as needed to be able to pick a satisfied one in the end.
+
+In this way, you can trigger the camera and take the time to pose at the position you want. You may even try different position, different pose. That's exactly what I did and it works like a charm.
 
 ## The typical landscapes
 
@@ -36,7 +40,7 @@ Back to the typical shots. I was desperately trying to find an interesting foreg
 
 My second shot was taken roughly 20 meters away from the waterfall. There I found some rocks tightening the stream that could be used to create the same smooth water flow effect.
 
-At the same time, the sunlight has penetrated clouds and lights up the trees on the left, created a nice warm cast.
+In the meanwhile, the sunlight has penetrated clouds and lights up the trees on the left, created a nice warm cast.
 
 {% include photo.html title='Spring Fantasy I' %}
 
