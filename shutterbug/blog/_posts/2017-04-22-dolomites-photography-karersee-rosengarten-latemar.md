@@ -76,4 +76,4 @@ It was still raining gently outside, I looked at Rosengarten from my window thin
 
 Shortly after sunset, the sky started to clear up. I went for dinner and hoped there will be a big and clear sunrise tomorrow.
 
-To be continued...
+The next day, for the second part of my trip, I went for [a hike to the Langkofel Group](<{% link shutterbug/blog/_posts/2017-06-21-dolomites-photography-sunrise-langkofel.md %}>), another marvelous beauty in this magic land.
