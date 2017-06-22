@@ -47,13 +47,6 @@ html {
                 color: lighten($black, 70%);
             }
         }
-
-        .disqus {
-            border-top: 1px solid $light-grey;
-            border-bottom: 1px solid $light-grey;
-            padding-top: $row-space / 2;
-            padding-bottom: $row-space / 2;
-        }
     }
 
     &.shutterbug {
@@ -65,11 +58,6 @@ html {
 
         article .article-header {
             background-color: $dark-grey;
-        }
-
-        .disqus {
-            border-top: 1px solid $dark-grey;
-            border-bottom: 1px solid $dark-grey;
         }
     }
 }

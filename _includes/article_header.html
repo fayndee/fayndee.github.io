@@ -4,7 +4,7 @@
 <a class="a--mono" href="{{ _article.url }}" title="{{ _article.title }}" itemprop="url">
 {% endif %}
 <h6 class="article-header__caption">
-    <span itemprop="about">{{ _article.tags | join: ', ' | downcase }}</span>
+    <span itemprop="about">{% if include.caption %}{{ include.caption }}{% else %}{{ _article.tags | join: ', ' | downcase }}{% endif %}</span>
     <time itemprop="datePublished">{{ _article.date | date: '%b %e, %Y' | downcase }}</time>
 </h6>
 <div class="article-header__grid">

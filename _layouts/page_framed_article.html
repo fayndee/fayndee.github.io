@@ -3,11 +3,18 @@ layout: page_framed
 ---
 {% include var/theme.liquid %}
 {% include var/article_image.liquid image=page.teaser_image %}
+{% include var/article_related.liquid %}
 <article>
-<div class="article-hero" style="background-image:url({{ article_image }});"></div>
-{% include article_header.html %}
-<section class="content">
-{{ content }}
-</section>
+    <div class="article-hero" style="background-image:url({{ article_image }});"></div>
+    {% include article_header.html %}
+    <section class="content">{{ content }}</section>
 </article>
+<div class="article-list">
+    {% if article_previous %}
+    {% include article_header.html article=article_previous link=true caption='Previous article' %}
+    {% endif %}
+    {% if article_next %}
+    {% include article_header.html article=article_next link=true caption='Next article' %}
+    {% endif %}
+</div>
 {% include disqus.html %}

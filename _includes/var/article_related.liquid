@@ -1,0 +1,22 @@
+{% assign _article = page %}
+{% for _post in site.posts %}
+    {% assign _article = _article.previous %}
+    {% unless _article %}
+        {% break %}
+    {% endunless %}
+    {% if _article.categories[0] == page.categories[0] %}
+        {% assign article_previous = _article %}
+        {% break %}
+    {% endif %}
+{% endfor %}
+{% assign _article = page %}
+{% for _post in site.posts %}
+    {% assign _article = _article.next %}
+    {% unless _article %}
+        {% break %}
+    {% endunless %}
+    {% if _article.categories[0] == page.categories[0] %}
+        {% assign article_next = _article %}
+        {% break %}
+    {% endif %}
+{% endfor %}
