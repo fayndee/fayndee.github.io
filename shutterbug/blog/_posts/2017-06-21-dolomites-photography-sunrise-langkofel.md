@@ -70,4 +70,4 @@ In order to walk away with a bonus, on my way back as the day before, I pulled o
 
 {% include photo.html title='The Guardian II' %}
 
-After that, my trip to this wonderful land came to an end. It was a place I sure will return.
+After this day, my trip to the wonderful Dolomites land came to an end. It was amazing, from the beginning to the end. I enjoyed a joyful family trip, an enormous adventure, and a diverse photography tour. This is the kind of place I sure will return.
