@@ -11,6 +11,6 @@ filters:
 
 A massif view from the distance.
 
-I pulled off my car for this lovely colored shot. The bulk massif was a guard for the tiny humanity hidden behind the trees.
+This is the typical scene in the area: the massif mountain backed village.
 
 [Read more](<{% link shutterbug/blog/_posts/2017-06-21-dolomites-photography-sunrise-langkofel.md %}>) about this shot.

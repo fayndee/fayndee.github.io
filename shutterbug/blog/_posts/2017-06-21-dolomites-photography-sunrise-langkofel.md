@@ -66,7 +66,7 @@ Second picture from the same spot was using the bigger stopper, again to show of
 
 In my eyes, the sky was too clear and lacked a bit of interest. Let's leave that one for the next time, I told myself.
 
-In order to walk away with a bonus, on my way back as the day before, I pulled off my car and took almost the same kind of picture only with a different mountain.
+In order to walk away with a bonus, on my way back as the day before, I pulled off my car and took almost the same kind of picture only with a different mountain. This is the typical scene in the area: the massif mountain backed village.
 
 {% include photo.html title='The Guardian II' %}
 
