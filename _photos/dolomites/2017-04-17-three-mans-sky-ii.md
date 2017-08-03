@@ -11,6 +11,6 @@ filters: nd 3.0 | circular polariser
 
 Langkofel Group view from the southern mountain resort.
 
-There is no direct view on the Langkofel summit. Instead, here are (left to right): Grohmannspitze (3126m), Fünffingerspitze (five finger summit 2996m), and Langkofeleck (Langkofel corner).
+Second shot from the same spot using the bigger stopper, trying to simulate the smoking effect. Not quite convinced by this one, what do you think?
 
 [Read more](<{% link shutterbug/blog/_posts/2017-06-21-dolomites-photography-sunrise-langkofel.md %}>) about this shot.
