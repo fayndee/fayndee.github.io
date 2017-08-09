@@ -42,5 +42,5 @@ permalink: /:categories/:title/
 exclude: [README.md, LICENSE.md, .gitignore, Gemfile, Gemfile.lock]
 
 # Plugins
-gems:
+plugins:
   - jekyll-sitemap
