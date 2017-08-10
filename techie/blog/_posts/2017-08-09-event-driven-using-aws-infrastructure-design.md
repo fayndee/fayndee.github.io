@@ -10,13 +10,13 @@ Event driven, it sounds cool and feels fancy, but it could screw up your day if 
 
 ## Managed or not Managed
 
-The answer to this question is not always obvious, given all the solutions available out there. Many people nowadays would possibly consider [Apache Kafka](https://kafka.apache.org/), which is a distributed message streaming system, we did give it a try as well. However, not every team/company has enough capacity to properly set it up and maintain it over time. Especially if you don't have *the system buddy* in your team to support that. It didn't take us too much time to realize this and therefore look for a managed service instead.
+The answer to this question is not always obvious, given all the solutions available out there. Many people nowadays would possibly consider [Apache Kafka](https://kafka.apache.org/), which is a distributed message streaming system, we did give it a try as well. However, not every team/company has enough capacity to properly set it up and maintain it over time. Especially if you don't have *the system buddy* in your team to support that. It didn't take us too much time to realize this and therefore we looked for a managed service instead.
 
-This leads us to look at the cloud providers, more precisely AWS, due to its popularity and our company support. AWS has several fully managed messaging services: Kinesis Streams being the closest equivalent to Apache Kafka, simpler solutions like SNS and SQS seem also do the job, [especially when you combine the two](http://docs.aws.amazon.com/sns/latest/dg/SNS_Scenarios.html). It's nice that AWS gives us alternative choices, only our initial question is still left unanswered by now...
+This leads us to look at the cloud providers, more precisely AWS, due to its popularity and our company support. AWS has several fully managed messaging services: Kinesis Streams being the closest equivalent to Apache Kafka, simpler solutions like SNS and SQS seem also do the job, [especially when you combine the two](http://docs.aws.amazon.com/sns/latest/dg/SNS_Scenarios.html). It's nice that AWS gives us alternative choices, only our initial question is still left unanswered till now...
 
 ## Keep an eye on the Requirements
 
-Before we deep dive into specifics of AWS services, it's better to make our mind about *what is exactly required for the event infrastructure*. Without this, we are pretty much blind in making decisions.
+Before we deep dive into specifics of AWS services, it's better to make up our mind about *what is exactly required for the event infrastructure*. Without this, we are pretty much blind in making decisions.
 
 Here are some requirements we came up with our system:
 
@@ -64,7 +64,7 @@ For more details, see [Kinesis Streams limits](http://docs.aws.amazon.com/stream
 
 ## SNS + SQS
 
-[Simple Notification Service](https://aws.amazon.com/sns/details/) and [Simple Queue Service ](https://aws.amazon.com/sqs/details/) offer highly scalable messaging capability. By combining both solutions, we can build an automatically scalable system for distributing events. Each consumer can have its own event queue set-up as needed, for instance, to provide guaranteed delivery or to allow events being consumed at a different pace.
+[Simple Notification Service](https://aws.amazon.com/sns/details/) and [Simple Queue Service](https://aws.amazon.com/sqs/details/) offer highly scalable messaging capability. By combining both solutions, we can build an automatically scalable system for distributing events. Each consumer can have its own event queue set-up as needed, for instance, to provide guaranteed delivery or to allow events being consumed at a different pace.
 
 {% include article_image.html image='article_event_infrastructure_sns_sqs.png' %}
 
@@ -76,11 +76,11 @@ One of the key features of this solution is the flexibility of choosing/combinin
 -   **Consumer SQS Standard Queue** - consumer can benefit from the _guaranteed delivery (see notes below)_ throughout the [retention period up to 14 days](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-lifecycle.html). Events may be occasionally delivered out of order. See [best-effort ordering](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html#standard-queues-message-order). Also, duplication of events may occasionally occur. See [at-least-once delivery](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html#standard-queues-at-least-once-delivery).
 -   **Consumer SQS FIFO Queue** - Not compatible with SNS topic subscription at this time.
 
-> Amazon doesn't actually state that SNS+SQS provides guaranteed delivery. They only informally suggest that in their [FAQ list](https://aws.amazon.com/sns/faqs/):
+> Amazon doesn't actually mention that SNS+SQS provides guaranteed delivery. They only informally suggest that in their [FAQ list](https://aws.amazon.com/sns/faqs/):
 <br><br>
 **Q: Does Amazon SNS guarantee that messages are delivered to the subscribed endpoint?**
 <br><br>
-When a message is published to a topic, Amazon SNS will attempt to deliver notifications to all subscribers registered for that topic. Due to potential Internet issues or Email delivery restrictions, sometimes the notification may not successfully reach an HTTP or Email end-point. In the case of HTTP, an SNS Delivery Policy can be used to control the retry pattern (linear, geometric, exponential backoff), maximum and minimum retry delays, and other parameters. **If it is critical that all published messages be successfully processed, developers should have notifications delivered to an SQS queue (in addition to notifications over other transports)**.
+A: When a message is published to a topic, Amazon SNS will attempt to deliver notifications to all subscribers registered for that topic. Due to potential Internet issues or Email delivery restrictions, sometimes the notification may not successfully reach an HTTP or Email end-point. In the case of HTTP, an SNS Delivery Policy can be used to control the retry pattern (linear, geometric, exponential backoff), maximum and minimum retry delays, and other parameters. **If it is critical that all published messages be successfully processed, developers should have notifications delivered to an SQS queue (in addition to notifications over other transports)**.
 {:.quote--info}
 
 #### Highly Scalable Consumers
@@ -92,6 +92,7 @@ By using SQS as additional event distribution backend, individual consumers have
 #### Auto Scaling (High Performance / Low Maintenance)
 
 Both SNS and SQS are scaled automatically based on traffic, no external instructions are needed.
+
 -    SNS doesn't have any limits on throughput, it could scale up almost infinitely.
 -    SQS Standard Queue also support nearly-unlimited throughput.
 
@@ -106,6 +107,7 @@ SNS offers topics, so events can be grouped and consumed by different consumers.
 Both SNS and SQS provide easy-to-use API to work with including a Java SDK. The programming model of the client (producer & consumer) is straightforward with minimum configuration up front. See more for [SNS Java SDK](http://docs.aws.amazon.com/sns/latest/dg/using-awssdkjava.html) and [SQS Java SDK](http://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/examples-sqs.html).
 
 #### Limitations
+
 -   Non-uniformed guarantee on delivery, highly dependent on chosen delivery scenario.
 -   SQS Standard Queue provides best-effort ordering, thus the consumer must deal with out of order events.
 -   SQS Standard Queue provides at-least-once delivery, thus the consumer must [deal with event duplications](https://stackoverflow.com/questions/37472129/using-many-consumers-in-sqs-queue).
