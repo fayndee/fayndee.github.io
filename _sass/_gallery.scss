@@ -5,13 +5,11 @@ $gallery-gutter: .6rem;
 .gallery,
 .photo {
     padding-top: $gallery-gutter;
-    padding-bottom: $row-space;
-    @include child-space;
+    padding-bottom: $gallery-gutter;
+    @include child-space($gallery-gutter);
 }
 
 .gallery {
-    padding-bottom: $gallery-gutter;
-
     &:hover > a:not(:hover) {
         opacity: .7;
     }
@@ -98,7 +96,7 @@ $gallery-gutter: .6rem;
                 float: none;
                 width: 100%;
                 margin-right: 0;
-                margin-bottom: $row-space;
+                margin-bottom: $gallery-gutter;
             }
         }
 
