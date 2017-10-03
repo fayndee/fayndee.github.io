@@ -1,7 +1,7 @@
 ---
 title: Waterfall Photography - Spring Time at Josefsthal
 tags: landscape
-teaser_image: /images/gallery/landscape/spring_fantasy_ii_1600x1067.jpg
+teaser_image: /images/gallery/nature/spring_fantasy_ii_1600x1067.jpg
 excerpt: A spring adventure at Josefsthaler Waterfall and an in-field experience with water flows
     long exposures.
 ---

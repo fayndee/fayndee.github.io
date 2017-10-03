@@ -1,5 +1,5 @@
 ---
 layout: page_framed_album
 album: people
-title: People photography by Fang Yuan
+title: People photo gallery by Fang Yuan
 ---

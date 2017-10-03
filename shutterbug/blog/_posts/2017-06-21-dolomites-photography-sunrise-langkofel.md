@@ -1,7 +1,7 @@
 ---
 title: Dolomites Photography - Sunrise at Langkofel
 tags: landscape
-teaser_image: /images/gallery/dolomites/smoking_langkofel_1600x1067.jpg
+teaser_image: /images/gallery/mountain/smoking_langkofel_1600x1067.jpg
 excerpt: At one of the most beautiful place in The Dolomites, sleeping is simply a luxury. This is a
     two days journey seeking for the sunrise at height.
 ---

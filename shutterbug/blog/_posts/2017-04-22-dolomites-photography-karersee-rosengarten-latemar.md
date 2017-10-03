@@ -1,7 +1,7 @@
 ---
 title: Dolomites Photography - Karersee with the view of Rosengarten and Latemar
 tags: landscape
-teaser_image: /images/gallery/dolomites/gem_on_latemar_1600x1103.jpg
+teaser_image: /images/gallery/mountain/gem_on_latemar_1600x1103.jpg
 excerpt: Drive to the lovely Karersee village located in the heart of Dolomites. Rosengarten and
     Latemar is just a look up away. The world heritage, Lake Karersee, is within a beginner's
     hiking distance.
