@@ -1,0 +1,16 @@
+---
+album: mountain
+title: Symmetric Ebner II
+date: 2017-06-02 20:38
+focal_length: 18mm
+iso: iso320
+aperture: f8
+shutter_speed: 1/30s
+filters:
+---
+
+Rainy sunset view of Ebner Spitz, Austria Tirol. A wide angle shot.
+
+After a long rainy hike to our mountain hut, the cloud suddenly broke out, a ray of sunlight cast on the Ebner Spitz in front of us, totally unexpected.
+
+[Read more](<{% link shutterbug/blog/_posts/2017-10-04-rofan-mountains-hike-with-unexpected.md %}>) about this shot.

@@ -4,8 +4,6 @@ $gallery-gutter: .6rem;
 .album,
 .gallery,
 .photo {
-    padding-top: $gallery-gutter;
-    padding-bottom: $gallery-gutter;
     @include child-space($gallery-gutter);
 }
 
