@@ -15,6 +15,10 @@ layout: page_framed
             <img class="gallery__album__img gallery__album__img--{{ n }}" src="{{ photo_thumbnail }}" srcset="{{ photo_srcset }}" itemprop="url" />
             <div class="gallery__album__img-fallback gallery__album__img-fallback--{{ n }}" style="background-image:url({{ photo_thumbnail }});"></div>
             {% assign n = n | plus: 1 %}
+            {% if photo.album == 'astrophotography' %}
+            <img class="gallery__album__img gallery__album__img--{{ n }}" src="{{ photo_thumbnail }}" srcset="{{ photo_srcset }}" itemprop="url" />
+            <div class="gallery__album__img-fallback gallery__album__img-fallback--{{ n }}" style="background-image:url({{ photo_thumbnail }});"></div>
+            {% endif %}
             {% if n == photo_collection.preview %}{% break %}{% endif %}
             {% endif %}
             {% endfor %}

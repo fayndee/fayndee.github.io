@@ -1,5 +1,5 @@
 ---
-title: Rofan Mountains - Hike with unexpected
+title: Rofan Mountains - Hike with the unexpected
 tags: landscape
 teaser_image: /images/gallery/nature/achensee_caught_on_fire_1600x900.jpg
 excerpt: Sometimes it turns out that no expectation is actually not a bad thing. It is particularly true when you plan for a hike.
@@ -37,11 +37,11 @@ The rain eventually stopped after more than 2 hours hike. The path led us out of
 
 8:30 pm., half hour to sunset, we were still on the way uphill. We were so tired, skies are getting dark, only last few hundred meters left, but it was like taking forever. At the point we thought we were about to give up, the cloud suddenly broke out, a ray of sunlight cast on the Ebner Spitz in front of us, totally unexpected. My breath was taken by the stunning view, it was absolutely magic.
 
-{% include photo.html title='Symmetric Ebner I' %}
+{% include photo.html title='Symmetric Ebner' %}
 
 The more I look at it, the more it looks like a painting. Vibrant color, interesting subject, perfect composition, there is definitely a picture to be taken, I was telling myself. So, I took 2. :)
 
-{% include photo.html title='Symmetric Ebner II' %}
+{% include article_image.html image='wide_symmetric_ebner.jpg' %}
 
 In the blink of an eye, the sun was gone. Like those beautiful moments in life, short but persistent. Before we completely gave up, we had to move on, again.
 

@@ -1,10 +1,10 @@
 ---
 album: nature
-date: 2017-05-22 15:46
-focal_length: 21mm
+date: 2017-05-22 15:51
+focal_length: 24mm
 iso: iso50
 aperture: f13
-shutter_speed: 1.3s
+shutter_speed: 2s
 filters: circular polariser
 ---
 

@@ -56,13 +56,13 @@ Same schedule for the second day, at 5:30 am. I'm already on site. No hiking nee
 
 From this side, I was not able to see the Langkofel summit. Instead, here are (left to right): Grohmannspitze (3126m), Fünffingerspitze (five finger summit 2996m), and Langkofeleck (Langkofel corner).
 
-{% include photo.html title='Three Mans Sky I' %}
+{% include photo.html title='Three Mans Sky' %}
 
 The sunlight was changing so fast, thus I took a lot of shots and this one was captured just in between two sunlight bursts.
 
 Second picture from the same spot was using the bigger stopper, again to show off the smoking effect.
 
-{% include photo.html title='Three Mans Sky II' %}
+{% include article_image.html image='smoked_three_mans_sky.jpg' %}
 
 In my eyes, the sky was too clear and lacked a bit of interest. Let's leave that one for the next time, I told myself.
 

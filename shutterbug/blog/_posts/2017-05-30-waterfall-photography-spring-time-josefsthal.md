@@ -1,7 +1,7 @@
 ---
 title: Waterfall Photography - Spring Time at Josefsthal
 tags: landscape
-teaser_image: /images/gallery/nature/spring_fantasy_ii_1600x1067.jpg
+teaser_image: /images/gallery/nature/spring_fantasy_1600x1067.jpg
 excerpt: A spring adventure at Josefsthaler Waterfall and an in-field experience with water flows
     long exposures.
 ---
@@ -42,12 +42,12 @@ My second shot was taken roughly 20 meters away from the waterfall. There I foun
 
 In the meanwhile, the sunlight has penetrated clouds and lights up the trees on the left, created a nice warm cast.
 
-{% include photo.html title='Spring Fantasy I' %}
+{% include article_image.html image='nerved_spring_fantasy.jpg' %}
 
 However, I was still not convinced by the foreground composition. I walked further away and found another, more interesting composition. This time I found a tiny "waterfall" that forms a perfect leading line to its background bigger brother.
 
 I set my shutter speed down to 2 seconds to have the foreground water pop out a bit more and I'm pretty satisfied with the result.
 
-{% include photo.html title='Spring Fantasy II' %}
+{% include photo.html title='Spring Fantasy' %}
 
 It was the shot that concluded my day.

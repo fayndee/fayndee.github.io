@@ -1,5 +1,6 @@
 # Info
 name: fayndee.me
+title: fayndee.me
 description: A little space where I share about my work and passion.
 url: http://fayndee.me
 author:
@@ -16,6 +17,7 @@ collections:
       - nature
       - urban
       - abstract
+      - astrophotography
       - people
     preview: 3
     output: true
