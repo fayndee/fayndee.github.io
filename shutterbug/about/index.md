@@ -17,7 +17,7 @@ believe to have.
 
 A few years back, when I got my first DSLR camera, I thought that was it, _I got it all_, the
 visionary and mastery of the imagery. Very soon after that, things went wrong and minds got confused.
-Until my relief from the total chaos:
+As usual, there is always more to learn, especially something you 'think' you are good at.
 
 > It has little to do with the things you see and everything to do with the way you see them.
 > --- Elliott Erwitt
