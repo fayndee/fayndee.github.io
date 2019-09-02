@@ -1,7 +1,7 @@
 ---
 title: Rofan Mountains - Hike with the unexpected
 tags: landscape
-teaser_image: /images/gallery/nature/achensee_caught_on_fire_1600x900.jpg
+teaser_image: /images/gallery/mountain/achensee_caught_on_fire_1600x900.jpg
 excerpt: Sometimes it turns out that no expectation is actually not a bad thing. It is particularly true when you plan for a hike.
 ---
 

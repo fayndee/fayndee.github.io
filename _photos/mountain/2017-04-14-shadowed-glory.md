@@ -1,5 +1,5 @@
 ---
-album: nature
+album: mountain
 date: 2017-04-14 17:00
 focal_length: 17mm
 iso: iso100
