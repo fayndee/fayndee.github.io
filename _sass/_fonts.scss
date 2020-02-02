@@ -27,15 +27,15 @@
 }
 
 @font-face {
-    font-family: 'fayndee_me';
-    font-style: normal;
-    font-weight: normal;
-    src: url('../fonts/fayndee_me.eot?17658884');
-    src: url('../fonts/fayndee_me.eot?17658884#iefix') format('embedded-opentype'),
-        url('../fonts/fayndee_me.woff2?17658884') format('woff2'),
-        url('../fonts/fayndee_me.woff?17658884') format('woff'),
-        url('../fonts/fayndee_me.ttf?17658884') format('truetype'),
-        url('../fonts/fayndee_me.svg?17658884#fayndee_me') format('svg');
+  font-family: 'fayndee_me';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/fayndee_me.eot?32929994');
+  src: url('../fonts/fayndee_me.eot?32929994#iefix') format('embedded-opentype'),
+       url('../fonts/fayndee_me.woff2?32929994') format('woff2'),
+       url('../fonts/fayndee_me.woff?32929994') format('woff'),
+       url('../fonts/fayndee_me.ttf?32929994') format('truetype'),
+       url('../fonts/fayndee_me.svg?32929994#fayndee_me') format('svg');
 }
 
 [class^="icon-"]:before,
@@ -75,9 +75,13 @@
 .icon-up:before { content: '\e802'; } /* '' */
 .icon-right:before { content: '\e803'; } /* '' */
 .icon-info:before { content: '\e804'; } /* '' */
+.icon-bilibili:before { content: '\e805'; } /* '' */
+.icon-douyin:before { content: '\e806'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
 .icon-github:before { content: '\f113'; } /* '' */
+.icon-youtube:before { content: '\f16a'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */
 .icon-copyright:before { content: '\f1f9'; } /* '' */
 .icon-500px:before { content: '\f26e'; } /* '' */
 .icon-flickr:before { content: '\f303'; } /* '' */

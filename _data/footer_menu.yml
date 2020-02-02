@@ -1,12 +1,12 @@
 techie:
     -   name: <i class="icon-twitter"></i>
         description: Follow me on Twitter
-        url: http://twitter.com/fayndee
+        url: https://twitter.com/fayndee
         target: _blank
 
     -   name: <i class="icon-github"></i>
         description: Fork me on Github
-        url: http://github.com/fayndee
+        url: https://github.com/fayndee
         target: _blank
 
     -   name: <i class="icon-up"></i>
@@ -15,19 +15,39 @@ techie:
         target: _self
 
 shutterbug:
+    -   name: <i class="icon-youtube"></i>
+        description: Follow me on Youtube
+        url: https://youtube.com/user/fayndee
+        target: _blank
+
+    -   name: <i class="icon-douyin"></i>
+        description: Follow me on Tiktok
+        url: https://tiktok.com/@fayndee
+        target: _blank
+
+    -   name: <i class="icon-instagram"></i>
+        description: Follow me on Instagram
+        url: https://instagram.com/fayndee/
+        target: _blank
+
     -   name: <i class="icon-flickr"></i>
         description: Follow me on Flickr
-        url: http://flicker.com/fayndee
+        url: https://flicker.com/fayndee
         target: _blank
 
     -   name: <i class="icon-500px"></i>
         description: Follow me on 500px
-        url: http://500px.com/fayndee
+        url: https://500px.com/fayndee
+        target: _blank
+
+    -   name: <i class="icon-bilibili"></i>
+        description: 关注我的B站频道
+        url: https://space.bilibili.com/385764576
         target: _blank
 
     -   name: <i class="icon-tuchong"></i>
         description: 关注我的图虫帐号
-        url: http://fayndee.tuchong.com
+        url: https://fayndee.tuchong.com
         target: _blank
 
     -   name: <i class="icon-up"></i>
