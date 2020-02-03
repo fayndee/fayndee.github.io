@@ -2,6 +2,12 @@
 
 A project for my personal blog & portfolio.
 
+## Convention
+
+This project follows:
+
+- [BEM](http://getbem.com/)
+
 ## License
 
 The source code (i.e. script, stylesheet & configuration etc.) of this project is licensed under the
