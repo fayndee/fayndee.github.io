@@ -139,8 +139,9 @@ article {
     figure {
         margin-left: -$column-space;
         margin-right: -$column-space;
+        text-align: center;
 
-        img {
+        img.full {
             width: 100%;
         }
     }
