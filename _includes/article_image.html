@@ -1,7 +1,6 @@
 {% include var/article_image.liquid article=include.article image=include.image %}
-{% assign _format = include.format | default: 'full' %}
 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <img src="{{ article_image }}" title="{{ include.caption }}" itemprop="thumbnail" class="{{ _format }}" />
+    <img src="{{ article_image }}" title="{{ include.caption }}" itemprop="thumbnail" class="{{ include.class }}" />
     {% if include.caption %}
     <figcaption>
         <cite itemprop="caption name">{{ include.caption }}</cite>

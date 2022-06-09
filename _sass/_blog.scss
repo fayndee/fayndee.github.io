@@ -141,8 +141,12 @@ article {
         margin-right: -$column-space;
         text-align: center;
 
-        img.full {
+        img {
             width: 100%;
+        }
+
+        img.original-size {
+            width: auto;
         }
     }
 

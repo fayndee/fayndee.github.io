@@ -6,7 +6,7 @@ excerpt: The story of Cody, a fellow software developer who is passionate about 
 
 Today, let me tell you the story of Cody, a fellow software developer who is passionate about his job. Here he is ↓
 
-{% include article_image.html image='article_cody.jpg' format='original' %}
+{% include article_image.html image='article_cody.jpg' class='original-size' %}
 
 ## It's Magic
 
@@ -16,7 +16,7 @@ He went to a local meetup and learned the magic word "*Microservices*". Since th
 
 Just another day at cafe, Cody met an old fellow named Eric. They spoke for a long time. The old Eric talked a lot about "*Domain*" and told Cody that it is not about the cut, but the context your business domain lives in and the boundary surround it. Impatient guy he is, Cody ran back to his desk and wrote down "*__Domain-Oriented Services__*". The next day, he was on a different challenge. 
 
-{% include article_image.html image='article_microservices.jpg' format='original' %}
+{% include article_image.html image='article_microservices.jpg' class='original-size' %}
 
 ## Somebody Else's Problem
 
@@ -46,7 +46,7 @@ At first, those measures seem solved the team's problem. Soon enough, Cody found
 
 Cody asked help from the platform team, they quickly pointed out: The core issue isn't the tools, but the process. The team should have consulted the platform team first before making those decisions. There are other fully managed alternatives the platform team can help Cody's team to set up to deal with the load. Also deviate from standard library means additional maintenance effort to the team. In the end, Cody's team don't want to build wheels, they want to build a car. So they should "*__Re-use over Re-invent__*" the wheels.
 
-{% include article_image.html image='article_reinvent.png' format='original' %}
+{% include article_image.html image='article_reinvent.png' class='original-size' %}
 
 ## Cody, the Nice Guy
 
