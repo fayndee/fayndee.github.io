@@ -32,7 +32,7 @@ shutterbug:
 
     -   name: <i class="icon-flickr"></i>
         description: Follow me on Flickr
-        url: https://flicker.com/fayndee
+        url: https://www.flickr.com/photos/fayndee/
         target: _blank
 
     -   name: <i class="icon-500px"></i>
